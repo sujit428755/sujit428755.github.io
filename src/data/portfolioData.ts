@@ -28,7 +28,7 @@ export const HERO = {
   secondaryButton: 'Get In Touch',
   image: '/assets/hero-red-bg.jpg', // 1920x1080, subject on the RIGHT side
   imageAlt: 'Portrait of Sujit Raut',
-  imagePosition: '69% center', // CSS object-position fallback
+  imagePosition: '76% center', // CSS object-position fallback
 };
 
 /* ───────────── 3. LOADING SCREEN ───────────── */

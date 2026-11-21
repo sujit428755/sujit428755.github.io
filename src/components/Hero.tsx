@@ -110,7 +110,9 @@ export const Hero: React.FC = () => {
     '[data-hero-copy] > span, [data-hero-copy] > h1, [data-hero-copy] > div, [data-hero-copy] > p'
   );
 
-  useEffect(() => setWebgl(hasWebGL()), []);
+  // Always use the flat glass card: the 3D shattering-glass effect cut across the portrait.
+  // To bring it back, change this to: setWebgl(hasWebGL())
+  useEffect(() => setWebgl(false), []);
 
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 767px)');
