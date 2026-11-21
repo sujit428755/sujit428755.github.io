@@ -21,7 +21,7 @@ import {
 const IMG_HERO_RED = HERO.image;
 
 /** Horizontal position (0..1) of the subject inside the 16:9 hero image. */
-const SUBJECT_X = 0.69;
+const SUBJECT_X = 0.755;
 
 /* ───────────────────────── Reveal-on-scroll for the hero copy ───────────────────────── */
 function useRevealOnScroll(rootRef: React.RefObject<HTMLElement>, selector: string) {
@@ -242,7 +242,8 @@ export const Hero: React.FC = () => {
             px += Math.sin(t * 0.5 + b * 2.1) * 0.006;
             py += Math.cos(t * 0.4 + b * 1.3) * 0.006;
           }
-          if (isMobile) [px, py] = [py, px]; // portrait plate on phones
+          // portrait plate on phones: rotate, and squeeze the cracks (all at x <= 0.5) into the bottom quarter so they stay off the face
+          if (isMobile) [px, py] = [py, px <= 0.5 ? 1 - px * 0.5 : 1.5 * (1 - px)];
           return [(px - 0.5) * plateW, (0.5 - py) * plateH];
         });
 

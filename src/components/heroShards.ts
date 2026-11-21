@@ -8,14 +8,16 @@ import * as THREE from 'three';
 export type Pt = [number, number];
 
 /* ── shared crack vertices ── */
-const V_TOP_A: Pt = [0.22, 0];
-const V_TOP_B: Pt = [0.515, 0];
-const V_TOP_C: Pt = [0.84, 0];
-const V_BOT_A: Pt = [0.34, 1];
-const V_BOT_B: Pt = [0.865, 1];
-const V_MID_A: Pt = [0.385, 0.72];
-const V_MID_B: Pt = [0.48, 0.62];
-const V_MID_C: Pt = [0.716, 0.49]; // the "centre" of the crack star
+// Cracks are kept in the left half so the portrait (right side) sits on one
+// unbroken pane and no seam crosses the face.
+const V_TOP_A: Pt = [0.17, 0];
+const V_TOP_B: Pt = [0.36, 0];
+const V_TOP_C: Pt = [0.5, 0];
+const V_BOT_A: Pt = [0.25, 1];
+const V_BOT_B: Pt = [0.47, 1];
+const V_MID_A: Pt = [0.29, 0.74];
+const V_MID_B: Pt = [0.34, 0.6];
+const V_MID_C: Pt = [0.46, 0.47]; // the "centre" of the crack star
 
 /** The five shards that tile the plate. */
 export const SHARD_POLYGONS: Pt[][] = [
