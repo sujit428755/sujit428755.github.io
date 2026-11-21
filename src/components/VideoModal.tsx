@@ -200,7 +200,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onNavi
                   onClick={() => onInquire(project)}
                   className="glass-red rounded-full px-5 py-3 text-xs font-bold uppercase tracking-wider text-white"
                 >
-                  {project.kind === 'software' ? 'Discuss Project' : 'Request Project'}
+                  {project.kind === 'software' ? 'Get In Touch' : 'Get In Touch'}
                 </a>
               </div>
             </div>

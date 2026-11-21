@@ -159,7 +159,7 @@ export const Stats: React.FC = () => {
       className="relative w-full text-gray-100 py-20 md:py-28 px-4 md:px-10 lg:px-16 overflow-hidden border-t border-white/5"
     >
       <h2 id="stats-heading" className="sr-only">
-        Client results
+        At a glance
       </h2>
 
       {/* One glass panel, three columns split by hairlines */}

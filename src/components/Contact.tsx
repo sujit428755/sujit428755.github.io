@@ -36,7 +36,7 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     setSubmitted(true);
     // Open user's mail client with the message pre-filled
-    const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(`Project Inquiry from ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+    const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(`Portfolio Inquiry from ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
     window.location.href = mailto;
     setTimeout(() => {
       setSubmitted(false);
@@ -110,7 +110,7 @@ export const Contact: React.FC = () => {
               Message Dispatched!
             </h3>
             <p className="text-lg text-gray-300 font-medium max-w-md">
-              Thanks for reaching out! Your email app has been opened with the project details pre-filled.
+              Thanks for reaching out! Your email app has been opened with your message pre-filled.
             </p>
           </div>
         ) : (
@@ -130,7 +130,7 @@ export const Contact: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-xs font-mono uppercase tracking-wider text-emerald-400">Open To New Projects</span>
+                <span className="text-xs font-mono uppercase tracking-wider text-emerald-400">Open To Full-Time Roles</span>
               </div>
             </div>
 
@@ -166,14 +166,14 @@ export const Contact: React.FC = () => {
 
             <div className="flex flex-col gap-2.5">
               <label className="text-sm md:text-base font-bold uppercase tracking-wider text-gray-400">
-                Message &amp; Project Scope
+                Your Message
               </label>
               <textarea
                 required
                 rows={6}
                 value={formData.message}
                 onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
-                placeholder="Tell me about your idea, timeline and what you need built..."
+                placeholder="Tell me about the role, team or opportunity..."
                 className="w-full px-6 py-5 glass-input rounded-3xl text-lg md:text-xl font-medium text-gray-100 placeholder:text-gray-500 focus:outline-none transition-all resize-none"
               />
             </div>

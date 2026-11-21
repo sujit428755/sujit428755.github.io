@@ -37,7 +37,7 @@ export const Services: React.FC = () => {
 
   return (
     <section
-      id="services"
+      id="experience"
       ref={sectionRef}
       className="relative w-full text-gray-100 py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center justify-center overflow-hidden border-t border-white/5"
     >
@@ -45,12 +45,12 @@ export const Services: React.FC = () => {
       <div ref={titleRef} className="flex flex-col items-center text-center mb-12 z-10">
         <span className="text-[#a31515] font-bold uppercase text-[10px] md:text-xs tracking-[0.2em] mb-2 flex items-center gap-1.5">
           <img src="/assets/icon.svg" alt="" aria-hidden="true" className="w-4 h-4 object-contain" />
-          What I Do
+          My Journey
         </span>
         <h2
           className="text-3xl md:text-5xl font-black tracking-tight uppercase text-white"
         >
-          SERVICES &amp; PRICING.
+          EXPERIENCE &amp; EDUCATION.
         </h2>
         <div className="w-12 h-1 bg-[#a31515] mt-2 rounded-full" />
       </div>
@@ -78,7 +78,7 @@ export const Services: React.FC = () => {
                     </h3>
                     {featured && (
                       <span className="glass-chip-red inline-block mt-1.5 text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full text-white">
-                        Specialty
+                        Current
                       </span>
                     )}
                   </div>
@@ -111,9 +111,6 @@ export const Services: React.FC = () => {
         })}
       </ul>
 
-      <p className="mt-8 w-full max-w-4xl text-center text-[11px] md:text-xs text-gray-500 leading-relaxed z-10">
-        *Final pricing depends on features, complexity, timeline and project scope.
-      </p>
     </section>
   );
 };
